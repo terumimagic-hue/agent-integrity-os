@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "objective": "Add a deterministic completion gate.",
+  "what_changed": ["Added core scoring engine", "Added CLI smoke test"],
+  "evidence_anchor": [
+    { "type": "test", "label": "Unit tests", "value": "npm test passed" },
+    { "type": "build", "label": "Build", "value": "npm run build passed" }
+  ],
+  "tests_run": ["npm test", "npm run build"],
+  "unresolved": ["MCP server planned for v0.2"],
+  "must_preserve": ["Core scoring remains deterministic"],
+  "risk_level": "low",
+  "rollback_path": "Revert this PR",
+  "restart_point": "Continue with packages/mcp-server in v0.2",
+  "stop_condition": "Stop if CLI exits non-zero",
+  "gate_output": "PASS"
+}

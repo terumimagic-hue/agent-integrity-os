@@ -1,0 +1,7 @@
+{
+  "name": "@agent-integrity/github-action",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "GitHub Action wrapper for Agent Integrity OS.",
+  "license": "MIT"
+}

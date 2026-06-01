@@ -1,0 +1,8 @@
+{
+  "name": "@agent-integrity/schemas",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "JSON schemas for Agent Integrity OS reports and handoffs.",
+  "files": ["../../schemas"],
+  "license": "MIT"
+}

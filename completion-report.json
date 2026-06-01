@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "objective": "Bootstrap Agent Integrity OS v0.1 as an English-first OSS starter repository for AI-generated work integrity checks.",
+  "what_changed": [
+    "Created Protocol / Schema / Core / CLI / GitHub Action / Benchmark / Docs repository structure",
+    "Implemented deterministic PASS / DELAY / BLOCK scoring engine without external API or LLM calls",
+    "Added CLI command for checking completion-report.json files",
+    "Added composite GitHub Action wrapper with GitHub Step Summary output",
+    "Added 30 benchmark cases with expected PASS / DELAY / BLOCK outcomes",
+    "Added README, specification, scoring model, handoff standard, whitepaper, roadmap, security, citation, and contribution files"
+  ],
+  "evidence_anchor": [
+    {
+      "type": "test",
+      "label": "Unit tests",
+      "value": "npm test passed"
+    },
+    {
+      "type": "build",
+      "label": "Build validation",
+      "value": "npm run build passed"
+    },
+    {
+      "type": "benchmark",
+      "label": "Benchmark suite",
+      "value": "npm run benchmark returned 30 passed, 0 failed"
+    },
+    {
+      "type": "smoke",
+      "label": "CLI examples",
+      "value": "PASS / DELAY / BLOCK examples returned expected statuses"
+    }
+  ],
+  "tests_run": [
+    "npm test",
+    "npm run build",
+    "npm run benchmark",
+    "node packages/cli/src/index.js check --report examples/pass-basic/completion-report.json",
+    "node packages/cli/src/index.js check --report examples/delay-missing-tests/completion-report.json",
+    "node packages/cli/src/index.js check --report examples/block-destructive-change/completion-report.json"
+  ],
+  "unresolved": [
+    "v0.1 uses JavaScript ESM for zero-dependency execution; TypeScript declarations/build pipeline can be added in v0.1.1 if desired",
+    "GitHub Marketplace publication still requires pushing this repo to GitHub and tagging a release",
+    "MCP server is planned for v0.2",
+    "OpenSSF/SLSA hardening is planned for v0.3"
+  ],
+  "must_preserve": [
+    "Core scoring remains deterministic and inspectable",
+    "No external API calls, telemetry, or LLM-based judgment in v0.1",
+    "Exit code contract: PASS=0, DELAY=1, BLOCK=2",
+    "Completion is not integrity remains the core public message"
+  ],
+  "risk_level": "low",
+  "rollback_path": "Delete or revert the generated agent-integrity-os directory before publishing, or revert the initial Git commit after repository creation.",
+  "restart_point": "Create a new GitHub repository named agent-integrity-os, copy this directory, run npm test && npm run build && npm run benchmark, then commit with: feat: bootstrap Agent Integrity OS v0.1",
+  "stop_condition": "Stop before publishing if npm test, npm run build, or npm run benchmark fails, or if any secrets are added to the repository.",
+  "gate_output": "PASS"
+}

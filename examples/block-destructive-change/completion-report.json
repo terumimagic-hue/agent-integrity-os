@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "objective": "Change production database migration behavior.",
+  "what_changed": ["Added destructive migration"],
+  "evidence_anchor": [
+    { "type": "review", "label": "Local review", "value": "Reviewed migration file" }
+  ],
+  "tests_run": ["npm test"],
+  "unresolved": ["Need DBA review"],
+  "risk_level": "high",
+  "restart_point": "Get migration review before merge",
+  "destructive_change": true,
+  "data_loss_risk": true,
+  "gate_output": "PASS"
+}

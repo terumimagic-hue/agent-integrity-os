@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "objective": "Update documentation for the completion protocol.",
+  "what_changed": ["Edited README", "Added scoring notes"],
+  "evidence_anchor": [
+    { "type": "manual", "label": "Doc review", "value": "Reviewed locally" }
+  ],
+  "unresolved": ["Need final CLI smoke test"],
+  "risk_level": "low",
+  "rollback_path": "Revert documentation commit",
+  "restart_point": "Run CLI smoke test and update report",
+  "gate_output": "DELAY"
+}

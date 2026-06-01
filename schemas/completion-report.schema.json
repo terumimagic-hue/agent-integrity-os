@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-integrity.dev/schemas/completion-report.schema.json",
+  "title": "Agent Integrity Completion Report",
+  "type": "object",
+  "required": [
+    "version",
+    "objective",
+    "what_changed",
+    "evidence_anchor",
+    "tests_run",
+    "unresolved",
+    "risk_level",
+    "rollback_path",
+    "restart_point",
+    "gate_output"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "objective": { "type": "string", "minLength": 1 },
+    "what_changed": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "evidence_anchor": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "label", "value"],
+        "properties": {
+          "type": { "type": "string" },
+          "label": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "tests_run": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "must_preserve": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "rollback_path": { "type": "string" },
+    "restart_point": { "type": "string" },
+    "stop_condition": { "type": "string" },
+    "mitigation": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "destructive_change": { "type": "boolean" },
+    "production_impact": { "type": "boolean" },
+    "security_or_secret_risk": { "type": "boolean" },
+    "data_loss_risk": { "type": "boolean" },
+    "gate_output": {
+      "type": "string",
+      "enum": ["PASS", "DELAY", "BLOCK"]
+    }
+  },
+  "additionalProperties": true
+}

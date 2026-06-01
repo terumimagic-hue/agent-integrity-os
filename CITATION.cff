@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Agent Integrity OS"
+message: "If you use Agent Integrity OS, please cite it using this metadata."
+type: software
+authors:
+  - family-names: "Morita"
+    given-names: "Terumi"
+version: "0.1.0"
+date-released: "2026-06-01"
+license: "MIT"
+abstract: "Completion is not integrity. Agent Integrity OS is a deterministic trust layer for AI-generated work."

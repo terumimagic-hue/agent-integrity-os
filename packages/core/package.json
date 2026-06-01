@@ -1,0 +1,11 @@
+{
+  "name": "@agent-integrity/core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Deterministic PASS / DELAY / BLOCK scoring engine for Agent Integrity OS.",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "MIT"
+}

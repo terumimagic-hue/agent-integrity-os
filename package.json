@@ -1,0 +1,28 @@
+{
+  "name": "agent-integrity-os",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Completion is not integrity. A trust layer for AI-generated work.",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node scripts/run-tests.js",
+    "build": "node scripts/build.js",
+    "benchmark": "node scripts/run-benchmark.js",
+    "check:example:pass": "node packages/cli/src/index.js check --report examples/pass-basic/completion-report.json",
+    "check:example:delay": "node packages/cli/src/index.js check --report examples/delay-missing-tests/completion-report.json || true",
+    "check:example:block": "node packages/cli/src/index.js check --report examples/block-destructive-change/completion-report.json || true"
+  },
+  "keywords": [
+    "ai-agents",
+    "completion-integrity",
+    "handoff",
+    "github-action",
+    "agentops",
+    "mcp"
+  ],
+  "author": "Terumi Morita",
+  "license": "MIT"
+}

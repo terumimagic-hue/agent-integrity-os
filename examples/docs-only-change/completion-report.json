@@ -1,0 +1,16 @@
+{
+  "version": "0.1.0",
+  "objective": "Clarify handoff documentation.",
+  "what_changed": ["Updated handoff standard", "Added restartability checklist"],
+  "evidence_anchor": [
+    { "type": "manual", "label": "Docs preview", "value": "Markdown rendered locally" }
+  ],
+  "tests_run": ["npm run build"],
+  "unresolved": ["No unresolved items"],
+  "must_preserve": ["Terminology: PASS / DELAY / BLOCK"],
+  "risk_level": "low",
+  "rollback_path": "Revert docs commit",
+  "restart_point": "Continue with GitHub Action docs",
+  "stop_condition": "Stop if links break",
+  "gate_output": "PASS"
+}

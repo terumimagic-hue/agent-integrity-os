@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-integrity.dev/schemas/handoff.schema.json",
+  "title": "Agent Integrity Handoff",
+  "type": "object",
+  "required": [
+    "objective",
+    "current_state",
+    "what_changed",
+    "unresolved",
+    "must_preserve",
+    "restart_point",
+    "next_recommended_action"
+  ],
+  "properties": {
+    "objective": { "type": "string" },
+    "current_state": { "type": "string" },
+    "what_changed": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "must_preserve": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence_anchor": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "restart_point": { "type": "string" },
+    "stop_condition": { "type": "string" },
+    "next_recommended_action": { "type": "string" }
+  },
+  "additionalProperties": true
+}

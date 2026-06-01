@@ -1,0 +1,24 @@
+name: "Agent Integrity OS"
+description: "Checks whether AI-generated work is complete, evidence-backed, and safely restartable."
+author: "Terumi Morita"
+inputs:
+  report:
+    description: "Path to completion-report.json"
+    required: false
+    default: "completion-report.json"
+  mode:
+    description: "Scoring mode: default or strict"
+    required: false
+    default: "default"
+runs:
+  using: "composite"
+  steps:
+    - name: Run Agent Integrity OS
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/packages/github-action/src/index.js"
+      env:
+        INPUT_REPORT: ${{ inputs.report }}
+        INPUT_MODE: ${{ inputs.mode }}
+branding:
+  icon: "shield"
+  color: "blue"

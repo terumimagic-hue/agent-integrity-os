@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "objective": "Benchmark case 16: evaluate completion integrity.",
+  "what_changed": [
+    "Changed benchmark fixture"
+  ],
+  "evidence_anchor": [],
+  "tests_run": [
+    "npm test"
+  ],
+  "unresolved": [
+    "No unresolved items"
+  ],
+  "must_preserve": [
+    "Deterministic scoring"
+  ],
+  "risk_level": "low",
+  "rollback_path": "Revert fixture change",
+  "restart_point": "Continue with next benchmark case",
+  "stop_condition": "Stop if expected status changes",
+  "gate_output": "DELAY"
+}

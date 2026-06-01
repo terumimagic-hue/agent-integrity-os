@@ -1,0 +1,13 @@
+{
+  "name": "@agent-integrity/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CLI for Agent Integrity OS.",
+  "bin": {
+    "agent-integrity": "src/index.js"
+  },
+  "dependencies": {
+    "@agent-integrity/core": "0.1.0"
+  },
+  "license": "MIT"
+}
